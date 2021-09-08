@@ -4,12 +4,12 @@
     box-sizing: border-box;
     outline: none;
     font-family: "Montserrat";
+    background-color: #F8F3FF;
 }
 
 .container {
     width: 1440px;
     margin: 0 auto;
-    /* border: 1px solid black; */
 }
 
 /* header */
@@ -17,7 +17,6 @@
     display: flex;
     width: 100%;
     height: 96px;
-    background-color: #F8F3FF;
 }
 
 .logo {
@@ -40,11 +39,72 @@
     font-size: 16px;
     font-weight: 500;
     margin-left: 32px;
-    line-height: 19.5px;
 }
 
 .navItem a {
     text-decoration: none;
+    color: #8E43ED;
 }
 
 /* /header */
+
+/* janeDoeSection */
+.janeDoeSection {
+    display: flex;
+    padding: 100px 176px 100px 64px;
+    border-radius: 250px/220px 0px 250px 0px;
+    background-color: #fff;
+}
+
+.janeDoeInfo {
+    font-family: "Montserrat";
+    margin: 44px 0 0 32px;
+
+}
+
+.janeDoeTitle {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 72px;
+    color: #303030;
+    margin-bottom: 24px;
+}
+
+.janeDoeInfoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 64px;
+
+}
+
+.janeDoeInfoItem {
+    display: flex;
+    margin-right: 32px;
+}
+
+.infoItemName {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #AA7ECD;
+    margin-right: 8px;
+
+}
+
+.janeDoeTextContentTitle {
+    font-size: 27px;
+    font-weight: 800;
+    color: #303030;
+    margin-bottom: 24px;
+}
+
+.janeDoeTextContentText {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 18px;/* Paragraph spacing: 18px */
+}
+
+/* /janeDoeSection */
