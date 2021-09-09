@@ -9,7 +9,10 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <!-- gilroy fonts -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+
     <title>Lending</title>
 </head>
 <body>
@@ -37,6 +40,7 @@
 
         <!-- content -->
         <div class="content">
+            <!-- janeDoe -->
             <div class="janeDoeSection">
                 <div class="janeDoeImgWrapper">
                     <img src="./assets/janeDoeSection/janeDoeImg.png" alt="JaneDoe">
@@ -74,15 +78,77 @@
                              sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
-                    
                 </div>
             </div>
+            <!-- /janeDoe -->
+
+            <!-- tellUsSection -->
             <div class="tellUsSection">
-                TellUsSection
+                <!-- <img class="tellUsBoxs leftBox1" src="./assets/tellUsSection/Boxs/leftBoxs/topBox.png" alt="leftTopBoxImg"> -->
+                <!-- <img class="tellUsBoxs" src="./assets/tellUsSection/Boxs/leftBoxs/middleBox.png" alt="leftMiddleBoxImg"> -->
+                <!-- <img class="tellUsBoxs" src="./assets/tellUsSection/Boxs/leftBoxs/bottomBox.png" alt="leftBottomBoxImg"> -->
+                <div>
+                    <h2 class="tellUsTitle">Tell us about yourself</h2>
+                </div>
+                <div class="form">
+                    <div class="formRow">
+                        <div class="formRowItem">
+                            <h3 class="formRowItemTitle">Your name</h3>
+                            <input class="formRowItemInput" type="text" placeholder="Tell us your name">
+                        </div>
+                        <div class="formRowItem">
+                            <h3 class="formRowItemTitle">Your gender</h3>
+                            <input class="formRowItemInput" type="text" placeholder="Chose your gender">
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formRowItem">
+                            <h3 class="formRowItemTitle">Your country</h3>
+                            <input class="formRowItemInput" type="text" placeholder="Where are you from?">
+                        </div>
+                        <div class="formRowItem">
+                            <h3 class="formRowItemTitle">Your City</h3>
+                            <input class="formRowItemInput" type="text" placeholder="Your native city">
+                        </div>
+                        <div class="formRowItem">
+                            <h3 class="formRowItemTitle">Your date of birth</h3>
+                            <input class="formRowItemInput" type="text" placeholder="dd.mm.yyyy">
+                        </div>
+                    </div>
+                    <div class="addPhoto">
+                        <div>
+                            <span class="addPhotoText">Proof your identity with some documents</span>
+                        </div>
+                        <div>
+                            <input type="file" name="file" id="file" class="inputFile">
+                            <label for="file" class="addFileBtn">
+                                Add document
+                            </label>
+                        </div>
+                        <!-- <input class="addPhotoFileInput" type="file"> -->
+                    </div>
+                    <div>
+                        <div class="loadedFile">
+                            <img class="loadedFoleImg" src="./assets/tellUsSection/loadedFile.png" alt="file-img">
+                            <div class="loadedFileContent">
+                                <p>File_name_001</p>
+                                <p class="loadedFileInfo">GPG 2,5 md</p>
+                            </div>
+                            <img src="./assets/tellUsSection/delete.png" alt="deleteImg">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="tellUsBtn">Send info</button>
+                </div>
             </div>
+            <!-- /tellUsSection -->
+
+            <!-- sliderSection -->
             <div class="sliderSection">
 
             </div>
+            <!-- /sliderSection -->
         </div> 
         <!-- /content -->
     </div>
