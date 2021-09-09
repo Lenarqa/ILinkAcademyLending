@@ -56,10 +56,38 @@
     background-color: #fff;
 }
 
+.janeDoeSection > *, .janeDoeTitle, 
+.janeDoeInfoRow, .janeDoeInfoItem > *,
+.janeDoeTextContent > *{
+    background-color: #fff;
+
+}
+
+.janeDoeImgWrapper {
+    background-color: transparent;
+    position: relative;
+}
+
+.janeDoeImgWrapper img{
+    background-color: transparent;
+}
+
+.topBoxImg { 
+    position: absolute;
+    left: -51px;
+    bottom: 106px;
+}
+
+.bottomBoxImg {
+    position: absolute;
+    left: -48px;
+    bottom: -46px;
+}
+
+
 .janeDoeInfo {
     font-family: "Montserrat";
     margin: 44px 0 0 32px;
-
 }
 
 .janeDoeTitle {
@@ -88,15 +116,14 @@
     font-weight: 700;
     line-height: 21px;
     color: #AA7ECD;
-    margin-right: 8px;
-
+    padding-right: 8px;
 }
 
 .janeDoeTextContentTitle {
     font-size: 27px;
     font-weight: 800;
     color: #303030;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
 }
 
 .janeDoeTextContentText {
@@ -104,7 +131,7 @@
     line-height: 32px;
     font-weight: 400;
     color: #000000;
-    margin-bottom: 18px;/* Paragraph spacing: 18px */
+    padding-bottom: 18px;/* Paragraph spacing: 18px */
 }
 
 /* /janeDoeSection */
