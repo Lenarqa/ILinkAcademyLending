@@ -28,13 +28,13 @@
             </div>
             <nav class="nav">
                 <div class="navItem">
-                    <a href="/JaneDoe">Jane Doe</a>
+                    <a href="#JaneDoe">Jane Doe</a>
                 </div>
                 <div class="navItem"> 
-                    <a href="/TellUs">Tell us about yourself</a>
+                    <a href="#TellUs">Tell us about yourself</a>
                 </div>
                 <div class="navItem">
-                    <a href="/Slider">Slider</a>
+                    <a href="#Slider">Slider</a>
                 </div>
             </nav>
         </header>
@@ -43,7 +43,7 @@
         <!-- content -->
         <div class="content">
             <!-- janeDoe -->
-            <div class="janeDoeSection">
+            <div id="JaneDoe" class="janeDoeSection">
                 <div class="janeDoeImgWrapper">
                     <img src="./assets/janeDoeSection/janeDoeImg.png" alt="JaneDoe">
                     <img class="topBoxImg" src="./assets/janeDoeSection/boxs/topBox.png" alt="topBoxImt">
@@ -85,7 +85,7 @@
             <!-- /janeDoe -->
 
             <!-- tellUsSection -->
-            <div class="tellUsSection">
+            <div id="TellUs" class="tellUsSection">
                 <!-- <img class="tellUsBoxs leftBox1" src="./assets/tellUsSection/Boxs/leftBoxs/topBox.png" alt="leftTopBoxImg"> -->
                 <!-- <img class="tellUsBoxs leftBox2" src="./assets/tellUsSection/Boxs/leftBoxs/middleBox.png" alt="leftMiddleBoxImg"> -->
                 <!-- <img class="tellUsBoxs leftBox3" src="./assets/tellUsSection/Boxs/leftBoxs/bottomBox.png" alt="leftBottomBoxImg"> -->
@@ -145,9 +145,15 @@
                 </div>
             </div>
              <!-- /tellUsSection -->
+        </div> 
+        <!-- /content -->
+    </div>
+    <!-- /container -->
 
-            <!-- sliderSection -->
-            <div class="sliderSection">
+    <!-- sliderSection -->
+    <div id="Slider" class="sliderSectionWrapper">
+        <div class="container">
+            <div class="sliderSection ">
                 <div class="sliderWrapper">
                     <div class="slidesContainer">
                         <div class="slide">
@@ -185,14 +191,10 @@
                     <div class="nextBtn"><i class="fas fa-chevron-right"></i></div> 
                     <div class="navigationDots"></div> 
                 </div>
-                
             </div>
-           
             <!-- /sliderSection -->
-        </div> 
-        <!-- /content -->
+        </div>
     </div>
-    <!-- /container -->
 
     <!-- scripts -->
     <script src="./scripts/main.js"></script>
