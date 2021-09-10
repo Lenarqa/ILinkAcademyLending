@@ -191,6 +191,41 @@ html {
     background-color: #fff;
 }
 
+.selectWrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.selectGender {
+    cursor: pointer;
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+    appearance: none;
+    /* padding: 16px 21px 16px 11.69px;
+    width: 304px;
+    height: 56px;
+    border: 1px solid #D9BBFF;
+    border-radius: 12px;
+    background-color: #fff; */
+}
+
+.selectWrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 17px;
+
+    display: block;
+    height: 10px;
+    width: 10px;
+    transform: translateY(-50%) rotate(-45deg);
+    border-bottom: 3px solid #8E43ED;
+    border-left: 3px solid #8E43ED;
+    border-radius: 2px;
+    pointer-events: none; /* убрал event с кастомной стрелки  */
+}
+
 .addPhoto {
     display: flex;
     align-items: center;
@@ -279,6 +314,10 @@ html {
     color: #AFAFAF;
 }
 
+.hiddenItem {
+    display: none;
+}
+
 .tellUsBox {
     background-color: transparent;
 }
@@ -361,6 +400,7 @@ html {
 .slide img {
     width: 100%;
     height: auto;
+    background-color: transparent;
 }
 
 .nextBtn, .prevBtn {

@@ -100,24 +100,29 @@
                         </div>
                         <div class="formRowItem">
                             <h3 class="formRowItemTitle">Your gender</h3>
-                            <input class="formRowItemInput" type="text" placeholder="Chose your gender">
+                            <div class="selectWrapper">
+                                <select class="formRowItemInput selectGender" placeholder="Chose your gender"> 
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="formRow">
-                        <div class="formRowItem">
+                        <div class="formRowItem hiddenItem">
                             <h3 class="formRowItemTitle">Your country</h3>
                             <input class="formRowItemInput" type="text" placeholder="Where are you from?">
                         </div>
-                        <div class="formRowItem">
+                        <div class="formRowItem hiddenItem">
                             <h3 class="formRowItemTitle">Your City</h3>
                             <input class="formRowItemInput" type="text" placeholder="Your native city">
                         </div>
-                        <div class="formRowItem">
+                        <div class="formRowItem hiddenItem">
                             <h3 class="formRowItemTitle">Your date of birth</h3>
                             <input class="formRowItemInput" type="text" placeholder="dd.mm.yyyy">
                         </div>
                     </div>
-                    <div class="addPhoto">
+                    <div class="addPhoto hiddenItem">
                         <div>
                             <span class="addPhotoText">Proof your identity with some documents</span>
                         </div>
@@ -130,7 +135,7 @@
                         <!-- <input class="addPhotoFileInput" type="file"> -->
                     </div>
                     <div>
-                        <div class="loadedFile">
+                        <div class="loadedFile hiddenItem">
                             <img class="loadedFoleImg" src="./assets/tellUsSection/loadedFile.png" alt="file-img">
                             <div class="loadedFileContent">
                                 <p>File_name_001</p>
