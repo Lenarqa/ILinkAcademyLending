@@ -141,8 +141,6 @@
     display: flex;
     flex-direction: column;
     margin: 56px 400px 48px 65px;
-    position: absolute;
-    z-index: 10;
 }
 
 .tellUsTitle {
@@ -150,7 +148,6 @@
     font-size: 40px;
     color: #303030;
     margin-bottom: 40px;
-    background-color:transparent;
 }
 
 .form {
@@ -301,3 +298,115 @@
 }
 
 /* /tellUsSection */
+
+
+/* slider */
+.sliderSection {
+    /* width: 100%; */
+    margin: 56px 64px;
+    background-color: #fff;
+
+}
+
+.sliderWrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slidesContainer{
+    width: 1312px;
+    height: 532px;
+    transition: 1000ms ease;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+}
+
+.slideInfo > * {
+    position: absolute;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) ;
+    color: #fff;
+}
+
+.slideInfo h2 {
+    font-size: 56px;
+    font-weight: 800;
+    top: 197px;
+}
+
+.slideInfo p {
+    font-size: 18px;
+    width: 580px;
+    height: 64px;
+    padding: 10px 20px;
+    top: 285px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.nextBtn, .prevBtn {
+    font-size: 30px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 400ms;
+    background-color: transparent;
+}
+
+.nextBtn i, .prevBtn i {
+    background-color: transparent;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    color: black;
+}
+
+.prevBtn {
+    left: 32px;
+}
+
+.nextBtn {
+    right: 32px;
+}
+
+.navigationDots {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 32px;
+}
+
+.singleDot {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 400ms;
+    margin-right: 12px;
+}
+
+.active {
+    background-color: #fff;
+}
+
+
+/* /slider */
