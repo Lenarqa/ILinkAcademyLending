@@ -285,18 +285,30 @@ html {
 .loadedFile {
     display: flex;
     align-items: center;
+    position: relative;
     width: 256px;
     height: 56px;
     padding: 9px 12px;
     border-radius: 12px;
     margin-bottom: 48px;
+    margin-right: 15px;
+}
+
+.loadedFimeDeleteImg {
+    position: absolute;
+    right: 16px;
+    border-color: transparent;
+    cursor: pointer;
 }
 
 .loadedFile, .loadedFileContent > *{
     background-color: #fff;
 }
 
-.loadedFoleImg {
+.loadedFileImg {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
     background-color: transparent;
     margin-right: 8px;
 }
@@ -306,7 +318,7 @@ html {
     font-weight: 400;
     color: #303030;
     line-height: 18px;
-    margin-right: 59.6px;
+    /* margin-right: 59.6px; */
 }
 
 .loadedFileInfo {

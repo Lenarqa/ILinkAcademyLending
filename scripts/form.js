@@ -17,9 +17,8 @@ const clearAll = () => {
 
 const initEventsListeners = () => {
     for (var i = 0; i < formRowItems.length; i++) {  
-        i == 1 ? formRowItems[i].addEventListener('change', validateForm) : formRowItems[i].addEventListener('keyup', validateForm);
+        i == 1 || i == 4 ? formRowItems[i].addEventListener('change', validateForm) : formRowItems[i].addEventListener('keyup', validateForm);
     };
-    
     hiddenItems[3].addEventListener('change', validateForm);
 }
 
@@ -29,17 +28,74 @@ const hideItems = () => {
     });
 }
 
+const createLoadedImg = (inputImg) => {
+    let loadImp = document.createElement("img");
+    loadImp.className = "loadedFileImg";
+
+    if (FileReader) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            console.log(document.getElementsByClassName("loadedFileImg"));
+            loadImp.src = fr.result;
+        }
+        fr.readAsDataURL(inputImg);
+    }
+
+    let fileName = inputImg.name.split(".")[0];
+    let fileType = inputImg.name.split(".")[1];
+    let fileSize = (parseInt(inputImg.size)/1024)/1024;
+
+    let loadedFileContent = document.createElement("div");
+    loadedFileContent.className = "loadedFileContent";
+    loadedFileContent.innerHTML =  `
+             <p>${fileName}</p>
+             <p class="loadedFileInfo">${fileType} ${fileSize.toFixed(3)} mb</p>
+    `;
+
+    let imgDelete = document.createElement("img");
+    imgDelete.className = "loadedFimeDeleteImg"
+    imgDelete.src = "./assets/tellUsSection/delete.png";
+    imgDelete.alt = "deleteImg";
+    imgDelete.addEventListener("click", (e) => {
+        var target = e.target;
+        var parent = target.parentElement;
+        parent.remove();
+        // код для создания данных для отправки на сервер.
+    });
+
+    let loadedFileDiv  = document.createElement("div");
+    loadedFileDiv.className = "loadedFile";
+
+    loadedFileDiv.appendChild(loadImp);
+    loadedFileDiv.appendChild(loadedFileContent);
+    loadedFileDiv.appendChild(imgDelete);
+    
+    return loadedFileDiv;
+}
+
 /* Если верхняя линия заполнена открываем 
     строку ниже, иначе скрываем нижнюю строку*/
 function validateForm(){
+    //валидация на ввод только анг и русских букв в форме имени
+    formRowItems[0].value = formRowItems[0].value.replace(/[^a-zа-яё\s]/gi, ''); 
+
     if(formRowItems[0].value != "" && formRowItems[1].value != ""){
         for (let i = 0; i < 3; i++) {
             hiddenItems[i].style.display = 'block';
         }
+        formRowItems[2].value = formRowItems[2].value.replace(/[^a-zа-яё\s]/gi, ''); 
+        formRowItems[3].value = formRowItems[3].value.replace(/[^a-zа-яё\s]/gi, ''); 
+        
+        let today = new Date().toISOString().split("T")[0];
+        formRowItems[4].setAttribute("max", today);
         if(formRowItems[2].value != "" && formRowItems[3].value != "" && formRowItems[4].value != "") {
             hiddenItems[3].style.display = 'flex';
             if (inputFile.value != undefined && inputFile.value != "") {
                 hiddenItems[4].style.display = 'flex';
+                console.log(inputFile.value);
+                let loadedImgItem = createLoadedImg(inputFile.files[0]);
+                let loadedFileWrapper = document.querySelector(".loadedFileWrapper");
+                loadedFileWrapper.appendChild(loadedImgItem);
             }else{
                 hiddenItems[4].style.display = 'none';
             }
@@ -50,6 +106,18 @@ function validateForm(){
         hideItems();
     }
 };
+
+
+// form validation
+
+// const formSend = (e) => {
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const form = document.getElementsByClassName(".form");
+
+//     form.addEventListener("submit", formSend);
+// });
 
 clearAll();
 initEventsListeners();

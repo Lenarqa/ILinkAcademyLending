@@ -92,10 +92,10 @@
                 <div>
                     <h2 class="tellUsTitle">Tell us about yourself</h2>
                 </div>
-                <div class="form">
+                <div class="form" action="#">
                     <div class="formRow">
                         <div class="formRowItem">
-                            <h3 class="formRowItemTitle">Your name</h3>
+                            <h3 class="formRowItemTitle" maxlength="15">Your name</h3>
                             <input class="formRowItemInput" type="text" placeholder="Tell us your name">
                         </div>
                         <div class="formRowItem">
@@ -119,7 +119,10 @@
                         </div>
                         <div class="formRowItem hiddenItem">
                             <h3 class="formRowItemTitle">Your date of birth</h3>
-                            <input class="formRowItemInput" type="text" placeholder="dd.mm.yyyy">
+                            <input 
+                                class="formRowItemInput" type="date" mask="00:00:00"
+                                min="1910-01-01" placeholder="dd.mm.yyyy"
+                            >
                         </div>
                     </div>
                     <div class="addPhoto hiddenItem">
@@ -127,22 +130,22 @@
                             <span class="addPhotoText">Proof your identity with some documents</span>
                         </div>
                         <div>
-                            <input type="file" name="file" id="file" class="inputFile">
+                            <input type="file" accept="image/*" id="file" class="inputFile">
                             <label for="file" class="addFileBtn">
                                 Add document
                             </label>
                         </div>
                         <!-- <input class="addPhotoFileInput" type="file"> -->
                     </div>
-                    <div>
-                        <div class="loadedFile hiddenItem">
+                    <div class="loadedFileWrapper hiddenItem">
+                        <!-- <div class="loadedFile">
                             <img class="loadedFoleImg" src="./assets/tellUsSection/loadedFile.png" alt="file-img">
                             <div class="loadedFileContent">
                                 <p>File_name_001</p>
                                 <p class="loadedFileInfo">GPG 2,5 md</p>
                             </div>
                             <img src="./assets/tellUsSection/delete.png" alt="deleteImg">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div>
