@@ -99,7 +99,7 @@
                     <div>
                         <h2 class="tellUsTitle">Tell us about yourself</h2>
                     </div>
-                    <form class="form" action="#" method="POST">
+                    <div class="form"> <!-- <form action="#" method="#" class="form"> убрал так как нет сервера -->
                         <div class="formRow">
                             <div class="formRowItem">
                                 <h3 class="formRowItemTitle" maxlength="15">Your name</h3>
@@ -144,12 +144,10 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="loadedFileWrapper hiddenItem">
-                            
+                        <div class="loadedFileWrapper hiddenItem"></div>
+                        <div>
+                            <button class="tellUsBtn">Send info</button> <!--<button type="submit" class="tellUsBtn">  -->
                         </div>
-                    </form>
-                    <div>
-                        <button type="submit" class="tellUsBtn">Send info</button>
                     </div>
                 </div>
                  <!-- /tellUsSection -->

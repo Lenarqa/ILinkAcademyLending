@@ -156,7 +156,7 @@ body {
 .leftBox1 {
     position: absolute;
     top: 8px;
-    left: 11px;
+    left: 0px;
     z-index: 0;
 }
 
@@ -170,7 +170,7 @@ body {
 .leftBox3 {
     position: absolute;
     top: 291px;
-    left: 9px;
+    left: 0px;
     z-index: 0;
 }
 
@@ -242,6 +242,7 @@ body {
     border: 1px solid #D9BBFF;
     border-radius: 12px;
     background-color: #fff;
+    transition: border-color 0.5s;
 }
 
 .selectWrapper {
@@ -290,6 +291,7 @@ body {
     border: 2px dashed #D9BBFF;
     border-radius: 12px;
     background-color: #fff;
+    transition: border-color 0.5s;
 }
 .addPhotoText {
     font-family: 'Gilroy';

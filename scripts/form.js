@@ -2,6 +2,14 @@ let formRowItems = document.querySelectorAll(".formRowItemInput");
 let hiddenItems = document.querySelectorAll(".hiddenItem");
 let inputFile = document.querySelector(".inputFile");
 
+let userExportData = {
+    "user_name": "",
+    "user_gender": "",
+    "user_from": "",
+    "user_city": "",
+    "user_img": "",
+};
+
 /*
     метод clearAll нужен чтобы удалять при перезагрузке страницы
         все данные написанные ранее пользователем в инпутах и селектах.
@@ -12,7 +20,6 @@ const clearAll = () => {
     });
 
     inputFile.value = "";
-    
 };
 
 const initEventsListeners = () => {
@@ -20,6 +27,7 @@ const initEventsListeners = () => {
         i == 1 || i == 4 ? formRowItems[i].addEventListener('change', validateForm) : formRowItems[i].addEventListener('keyup', validateForm);
     };
     hiddenItems[3].addEventListener('change', validateForm);
+    document.querySelector(".tellUsBtn").addEventListener("click", clickTellUsBtn);
 }
 
 const hideItems = () => {
@@ -37,6 +45,7 @@ const createLoadedImg = (inputImg) => {
         в url использовал FileReader, этот же url буду использовать 
         при нажатии на кнопку отправить в кнопке 
     */ 
+    
     if (FileReader) {
         var fr = new FileReader();
         fr.onload = function () {
@@ -44,7 +53,7 @@ const createLoadedImg = (inputImg) => {
         }
         fr.readAsDataURL(inputImg);
     }
-    
+
     let fileName = inputImg.name.split(".")[0];
     // ограничил длинну наименования фото 10 символами.
     if(fileName.length > 10) {
@@ -78,13 +87,11 @@ const createLoadedImg = (inputImg) => {
     loadedFileDiv.appendChild(loadImp);
     loadedFileDiv.appendChild(loadedFileContent);
     loadedFileDiv.appendChild(imgDelete);
-    
+
     return loadedFileDiv;
 }
 
-/* Если верхняя линия заполнена открываем 
-    строку ниже, иначе скрываем нижнюю строку*/
-function validateForm(){
+function validateForm () {
     //валидация на ввод только анг и русских букв в форме имени
     formRowItems[0].value = formRowItems[0].value.replace(/[^a-zа-яё\s]/gi, ''); 
 
@@ -103,6 +110,10 @@ function validateForm(){
                 hiddenItems[4].style.display = 'flex';
                 let loadedImgItem = createLoadedImg(inputFile.files[0]);
                 let loadedFileWrapper = document.querySelector(".loadedFileWrapper");
+                // если изображение уже было загружено, то удаляем старое изображении и добавляем новое.
+                if(document.querySelector('.loadedFile')) {
+                    document.querySelector('.loadedFile').remove();
+                }
                 loadedFileWrapper.appendChild(loadedImgItem);
             }else{
                 hiddenItems[4].style.display = 'none';
@@ -115,17 +126,44 @@ function validateForm(){
     }
 };
 
+function clickTellUsBtn () {
+    // проверка что все поля заполнены
+    formRowItems.forEach(item => {
+        if(item.value === "" ) {
+            item.style.borderColor = "red";
+        }
+        setTimeout(() => {
+            item.style.borderColor = "#D9BBFF";
+        }, 500);
+        return;
+    });
+    
+    if(inputFile.value == "") {
+        let addPhoto = document.querySelector(".addPhoto");
+        addPhoto.style.borderColor = "red";
+        setTimeout(() => {
+            addPhoto.style.borderColor = "#D9BBFF";
+        }, 500);
+        return;
+    }
 
-// form validation
+    // присвоение заполненных полей в json
+    userExportData["user_name"] = formRowItems[0].value;
+    userExportData["user_gender"] = formRowItems[1].value;
+    userExportData["user_from"] = formRowItems[2].value;
+    userExportData["user_city"] = formRowItems[3].value;
 
-// const formSend = (e) => {
-// }
+    // для изображения получаем Src уже после файл реадера, т.к от пути файла в компьютере пользователя нет смысла.
+    let fileReaderSrc = document.querySelector(".loadedFileImg").src;
+    userExportData["user_img"] = fileReaderSrc;
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const form = document.getElementsByClassName(".form");
+    // Вывод готовых данных пользователя в консоль, тут должна быть отправка данных на сервер
+    console.log(userExportData);
 
-//     form.addEventListener("submit", formSend);
-// });
+    // зачищаем поля
+    clearAll();
+    validateForm ();
+}
 
 clearAll();
 initEventsListeners();
