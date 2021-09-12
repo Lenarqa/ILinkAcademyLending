@@ -32,16 +32,25 @@ const createLoadedImg = (inputImg) => {
     let loadImp = document.createElement("img");
     loadImp.className = "loadedFileImg";
 
+    /* 
+        чтобы преобразовать путь документа с компьютерного (C:/folder/img) 
+        в url использовал FileReader, этот же url буду использовать 
+        при нажатии на кнопку отправить в кнопке 
+    */ 
     if (FileReader) {
         var fr = new FileReader();
         fr.onload = function () {
-            console.log(document.getElementsByClassName("loadedFileImg"));
             loadImp.src = fr.result;
         }
         fr.readAsDataURL(inputImg);
     }
-
+    
     let fileName = inputImg.name.split(".")[0];
+    // ограничил длинну наименования фото 10 символами.
+    if(fileName.length > 10) {
+        fileName = fileName.substring(0, 10);   
+    }
+
     let fileType = inputImg.name.split(".")[1];
     let fileSize = (parseInt(inputImg.size)/1024)/1024;
 
@@ -92,7 +101,6 @@ function validateForm(){
             hiddenItems[3].style.display = 'flex';
             if (inputFile.value != undefined && inputFile.value != "") {
                 hiddenItems[4].style.display = 'flex';
-                console.log(inputFile.value);
                 let loadedImgItem = createLoadedImg(inputFile.files[0]);
                 let loadedFileWrapper = document.querySelector(".loadedFileWrapper");
                 loadedFileWrapper.appendChild(loadedImgItem);

@@ -85,74 +85,75 @@
             <!-- /janeDoe -->
 
             <!-- tellUsSection -->
-            <div id="TellUs" class="tellUsSection">
-                <!-- <img class="tellUsBoxs leftBox1" src="./assets/tellUsSection/Boxs/leftBoxs/topBox.png" alt="leftTopBoxImg"> -->
-                <!-- <img class="tellUsBoxs leftBox2" src="./assets/tellUsSection/Boxs/leftBoxs/middleBox.png" alt="leftMiddleBoxImg"> -->
-                <!-- <img class="tellUsBoxs leftBox3" src="./assets/tellUsSection/Boxs/leftBoxs/bottomBox.png" alt="leftBottomBoxImg"> -->
-                <div>
-                    <h2 class="tellUsTitle">Tell us about yourself</h2>
-                </div>
-                <div class="form" action="#">
-                    <div class="formRow">
-                        <div class="formRowItem">
-                            <h3 class="formRowItemTitle" maxlength="15">Your name</h3>
-                            <input class="formRowItemInput" type="text" placeholder="Tell us your name">
-                        </div>
-                        <div class="formRowItem">
-                            <h3 class="formRowItemTitle">Your gender</h3>
-                            <div class="selectWrapper">
-                                <select class="formRowItemInput selectGender" placeholder="Chose your gender"> 
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
+            <div class="tellUsSectionWrapper">
+
+                <img class="tellUsBoxs leftBox1" src="./assets/tellUsSection/Boxs/leftBoxs/topBox.png" alt="topBox">
+                <img class="tellUsBoxs leftBox2" src="./assets/tellUsSection/Boxs/leftBoxs/middleBox.png" alt="middleBox">
+                <img class="tellUsBoxs leftBox3" src="./assets/tellUsSection/Boxs/leftBoxs/bottomBox.png" alt="bottomBox">
+                
+                <img class="tellUsBoxs rigthBox1" src="./assets/tellUsSection/Boxs/rigthBoxs/topRigthBox.png" alt="topRigthBox">
+                <img class="tellUsBoxs rigthBox2" src="./assets/tellUsSection/Boxs/rigthBoxs/middleRigthBox.png" alt="middleRigthBox">
+                <img class="tellUsBoxs rigthBox3" src="./assets/tellUsSection/Boxs/rigthBoxs/bottomRigthBox.png" alt="bottomRigthBox">
+                
+                <div id="TellUs" class="tellUsSection">
+                    <div>
+                        <h2 class="tellUsTitle">Tell us about yourself</h2>
+                    </div>
+                    <form class="form" action="#" method="POST">
+                        <div class="formRow">
+                            <div class="formRowItem">
+                                <h3 class="formRowItemTitle" maxlength="15">Your name</h3>
+                                <input name="user_name" class="formRowItemInput" type="text" placeholder="Tell us your name">
+                            </div>
+                            <div class="formRowItem">
+                                <h3 class="formRowItemTitle">Your gender</h3>
+                                <div class="selectWrapper">
+                                    <select name="user_gender" class="formRowItemInput selectGender" placeholder="Chose your gender"> 
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="formRow">
-                        <div class="formRowItem hiddenItem">
-                            <h3 class="formRowItemTitle">Your country</h3>
-                            <input class="formRowItemInput" type="text" placeholder="Where are you from?">
-                        </div>
-                        <div class="formRowItem hiddenItem">
-                            <h3 class="formRowItemTitle">Your City</h3>
-                            <input class="formRowItemInput" type="text" placeholder="Your native city">
-                        </div>
-                        <div class="formRowItem hiddenItem">
-                            <h3 class="formRowItemTitle">Your date of birth</h3>
-                            <input 
-                                class="formRowItemInput" type="date" mask="00:00:00"
-                                min="1910-01-01" placeholder="dd.mm.yyyy"
-                            >
-                        </div>
-                    </div>
-                    <div class="addPhoto hiddenItem">
-                        <div>
-                            <span class="addPhotoText">Proof your identity with some documents</span>
-                        </div>
-                        <div>
-                            <input type="file" accept="image/*" id="file" class="inputFile">
-                            <label for="file" class="addFileBtn">
-                                Add document
-                            </label>
-                        </div>
-                        <!-- <input class="addPhotoFileInput" type="file"> -->
-                    </div>
-                    <div class="loadedFileWrapper hiddenItem">
-                        <!-- <div class="loadedFile">
-                            <img class="loadedFoleImg" src="./assets/tellUsSection/loadedFile.png" alt="file-img">
-                            <div class="loadedFileContent">
-                                <p>File_name_001</p>
-                                <p class="loadedFileInfo">GPG 2,5 md</p>
+                        <div class="formRow">
+                            <div class="formRowItem hiddenItem">
+                                <h3 class="formRowItemTitle">Your country</h3>
+                                <input name="user_from" class="formRowItemInput" type="text" placeholder="Where are you from?">
                             </div>
-                            <img src="./assets/tellUsSection/delete.png" alt="deleteImg">
-                        </div> -->
+                            <div class="formRowItem hiddenItem">
+                                <h3 class="formRowItemTitle">Your City</h3>
+                                <input name="user_city" class="formRowItemInput" type="text" placeholder="Your native city">
+                            </div>
+                            <div class="formRowItem hiddenItem">
+                                <h3 class="formRowItemTitle">Your date of birth</h3>
+                                <input 
+                                    name="user_birth" 
+                                    class="formRowItemInput" type="date" mask="00:00:00"
+                                    min="1910-01-01" placeholder="dd.mm.yyyy"
+                                >
+                            </div>
+                        </div>
+                        <div class="addPhoto hiddenItem">
+                            <div>
+                                <span class="addPhotoText">Proof your identity with some documents</span>
+                            </div>
+                            <div>
+                                <input name="user_img" type="file" accept="image/*" id="file" class="inputFile">
+                                <label for="file" class="addFileBtn">
+                                    Add document
+                                </label>
+                            </div>
+                        </div>
+                        <div class="loadedFileWrapper hiddenItem">
+                            
+                        </div>
+                    </form>
+                    <div>
+                        <button type="submit" class="tellUsBtn">Send info</button>
                     </div>
                 </div>
-                <div>
-                    <button class="tellUsBtn">Send info</button>
-                </div>
+                 <!-- /tellUsSection -->
             </div>
-             <!-- /tellUsSection -->
         </div> 
         <!-- /content -->
     </div>

@@ -8,6 +8,9 @@ html {
     box-sizing: border-box;
     outline: none;
     font-family: "Montserrat";
+}
+
+body {
     background-color: #F8F3FF;
 }
 
@@ -141,10 +144,60 @@ html {
 
 
 /* tellUsSection */
+.tellUsSectionWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.tellUsBox {
+    background-color: transparent;
+}
+
+.leftBox1 {
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    z-index: 0;
+}
+
+.leftBox2 {
+    position: absolute;
+    top: 117px;
+    left: 173px;
+    z-index: 0;
+}
+
+.leftBox3 {
+    position: absolute;
+    top: 291px;
+    left: 9px;
+    z-index: 0;
+}
+
+.rigthBox1 {
+    position: absolute; 
+    top: 35px;
+    right: 0;
+}
+
+.rigthBox2 {
+    position: absolute;
+    top: 164px;
+    right: 173px;
+}
+
+.rigthBox3 {
+    position: absolute;
+    top: 302px;
+    right: 0;
+}
+
 .tellUsSection {
     display: flex;
     flex-direction: column;
     margin: 56px 400px 48px 65px;
+    position: relative;
+    
 }
 
 .tellUsTitle {
@@ -307,7 +360,7 @@ html {
 
 .loadedFileImg {
     width: 40px;
-    height: auto;
+    height: 40px;
     border-radius: 50%;
     background-color: transparent;
     margin-right: 8px;
@@ -329,29 +382,6 @@ html {
 .hiddenItem {
     display: none;
 }
-
-.tellUsBox {
-    background-color: transparent;
-}
-
-.leftBox1 {
-    position: absolute;
-    top: 60px;
-    left: -45px;
-}
-
-.leftBox2 {
-    position: absolute;
-    top: 189px;
-    left: 170px;
-}
-
-.leftBox3 {
-    position: absolute;
-    top: 348px;
-    left: -152px;
-}
-
 /* /tellUsSection */
 
 
