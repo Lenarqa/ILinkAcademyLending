@@ -1,0 +1,381 @@
+@media (max-width: 1278px) {
+    /* header */
+    .header {
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 26.24px 100px 25.45px 0px;
+    }
+    /* /header */
+
+    /* janeDoeSection */
+    .janeDoeTitle {
+        margin-bottom: 10px;
+    }
+
+    .janeDoeInfoRow {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .janeDoeInfoItem {
+        padding: 0px 0px 10px 0px;
+    }
+
+    .janeDoeTextContentTitle {
+        padding-bottom: 10px;
+    }
+
+    .janeDoeTextContent {
+        width: 450px;
+        font-size: 10px;
+    }
+
+    .rigthBox1, .rigthBox2, .rigthBox3 {
+        display: none;
+    }
+    /* /janeDoeSection */
+
+    /* slider */
+    .sliderSection {
+        display: flex;
+        justify-content: center;
+        width: 1169px;
+    } 
+
+    .sliderWrapper { 
+        width: 60%;
+    }
+
+    .slidesContainer {
+        width: 100%;
+       height: 264px;
+    }
+
+    .slideInfo h2{
+        width: 100%;
+        text-align: center;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20%);
+    }
+
+    .slideInfo p {
+        width: 60%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    /* /slider */
+
+}
+
+@media(max-width: 1169px) {
+    .container {
+        width: 1169px;
+    }
+}
+
+@media(max-width: 1081px) {
+    .container {
+        width: 1081px;
+    }
+    /* janeDoeSection */
+    .janeDoeSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .janeDoeInfoRow {
+        align-items: center;
+    }
+    /* /janeDoeSection */
+}
+
+@media(max-width: 897px) {
+    .container {
+        width: 897px;
+    }
+
+    /* tellUsSection */
+    .tellUsSection {
+        margin: 20px;
+    }
+
+    /* form */
+    .formRow {
+        /* flex-direction: ; */
+        flex-wrap: wrap;
+    }
+
+    .formRowItem {
+        margin-bottom: 20px;
+    }
+
+    .selectWrapper {
+        width: 304px;
+    }
+
+    .addPhoto {
+        width: 100%;
+    }
+    /* /form */
+
+    /* slider */
+    .sliderSection {
+        width: 100%;
+    }
+    
+    .sliderWrapper {
+        width: 100%;
+    }
+    
+    .slidesContainer {
+        height: 318px;
+    }
+    /* /slider */
+}
+
+@media(max-width: 897px) {
+    .container {
+        width: 741px;
+    }
+
+    /* janeDoeSection */
+    .janeDoeSection {
+        padding: 0;
+    }
+    /* /janeDoeSection */
+
+    /* tellUsSection */
+    .addPhoto {
+        width: 80%;
+    }
+    /* /tellUsSection */
+
+    /* slider */
+    .slidesContainer {
+        height: 268px;
+    }
+
+    .slideInfo h2 {
+        font-size: 3rem;
+    }
+    /* /slider */
+}
+
+
+@media(max-width: 671px) {
+    .container {
+        width: 660px;
+    }
+
+    /* header */
+    .logo {
+        margin: 26.24px 0px 25.45px 0px;
+    }
+    .nav {
+        display: none;
+    }
+    /* /header */
+
+    /* tellUsSection */
+    .tellUsSectionWrapper {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .formRow {
+        justify-content: center;
+    }
+
+    .addPhoto {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 140px;
+        margin: 0 auto;
+    }
+
+    .tellUsBtn {
+        margin-top: 8px;
+    }
+    /* tellUsSection */
+
+    /* slider */
+    .slidesContainer {
+        height: 233px;
+    }
+    /* /slider */
+}
+
+@media(max-width: 588px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* header */
+    .header {
+        height: 64px;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0;
+    }
+    /* /header */
+
+    /* janeDoeSection */
+    .janeDoeSection {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 0%;
+    }
+    
+    .janeDoeMainImg {
+        padding: 24px 0;
+        width: 348px;
+        height: 396px;
+    }
+
+    .topBoxImg {
+        width: 32.28px;
+        height: 32.28px;
+        left: auto;
+        right: 2px;
+        bottom: 69px;
+        transform: rotate(50deg);
+    }
+
+    .bottomBoxImg {
+        width: 56.46px;
+        height: 56.46px;
+        left: auto;
+        right: 5px;
+        bottom: 10px;
+    }
+
+    .janeDoeInfo {
+        text-align: left;
+        margin: 0px 0px 0px 32px;
+    }
+
+    .janeDoeInfoRow {
+        flex-direction: row;
+    }
+
+    .janeDoeInfoItem {
+        flex-direction: column;
+        justify-content: start;
+        margin-right: 39px;
+        font-size: 14px;
+    }
+
+    .janeDoeTextContent {
+        margin: 32px 0px 39px 0px;
+        width: 100%;
+    }
+
+    .janeDoeTextContentText {
+        width: 348px;
+        font-size: 15px;
+    }
+
+    .janeDoeTextContentTitle {
+        padding-bottom: 16px;
+    }
+
+    .janeDoeTitle {
+        font-size: 40px;
+    }
+    /* /janeDoeSection */
+
+    /* tellUsSection */
+    .tellUsSectionWrapper {
+        justify-content: center;
+    }
+    .formRow {
+        margin-bottom: 0;
+    }
+
+    .formRowItem {
+        margin: 0px 0px 40px 0px ;
+    }
+
+    .addPhoto {
+        width: 348px;
+        height: 175px;
+    }
+
+    .addPhotoText {
+        display: inline-block;
+        width: 212px;
+        height: 48px;
+        padding: 27.5px 0px 0px 0px;
+    }
+
+    .loadedFile { 
+        margin: 8px 0px 40px 0px;
+        width: 100%;
+        height: 56px;
+    }
+
+    .leftBox1, .leftBox2, .leftBox3 {
+        display: none;
+    }
+    /* /tellUsSection */
+
+
+    /* slider */
+    .sliderSection {
+        padding: 0;
+    }
+    .sliderWrapper {
+        margin: 32px 16px;
+        width: 346px;
+        height: 535px;
+        border-radius: 24px;
+    }
+
+    .slidesContainer {
+        width: 346px;
+        height: 535px;
+    }
+
+    .slide img {
+        width: 346px;
+        height: 535px;
+        background-color: transparent;
+        object-fit: cover;
+    }
+
+    .slideInfo h2 {
+        top: 170px;
+        width: 225px;
+        font-size: 40px;
+    }
+
+    .slideInfo p {
+        font-size: 15px;
+        font-weight: 500;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-55%);
+        line-height: 24px;
+        width: 254px;
+    }
+
+    .nextBtn, .prevBtn {
+        top: auto;
+        bottom: 30px;
+        transform: translateY(-30px);
+    }
+
+    .navigationDots {
+        bottom: 68px;
+    } 
+    /* /slider */
+}

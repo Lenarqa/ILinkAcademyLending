@@ -154,8 +154,18 @@ function clickTellUsBtn () {
     userExportData["user_city"] = formRowItems[3].value;
 
     // для изображения получаем Src уже после файл реадера, т.к от пути файла в компьютере пользователя нет смысла.
-    let fileReaderSrc = document.querySelector(".loadedFileImg").src;
-    userExportData["user_img"] = fileReaderSrc;
+    
+    if(!document.querySelector(".loadedFileImg")) {
+        let addPhoto = document.querySelector(".addPhoto");
+        addPhoto.style.borderColor = "red";
+        setTimeout(() => {
+            addPhoto.style.borderColor = "#D9BBFF";
+        }, 500);
+        return;
+    }else {
+        let fileReaderSrc = document.querySelector(".loadedFileImg").src;
+        userExportData["user_img"] = fileReaderSrc;
+    }
 
     // Вывод готовых данных пользователя в консоль, тут должна быть отправка данных на сервер
     console.log(userExportData);

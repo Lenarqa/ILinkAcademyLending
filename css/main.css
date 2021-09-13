@@ -256,12 +256,6 @@ body {
    -moz-appearance:none;
    -ms-appearance:none;
     appearance: none;
-    /* padding: 16px 21px 16px 11.69px;
-    width: 304px;
-    height: 56px;
-    border: 1px solid #D9BBFF;
-    border-radius: 12px;
-    background-color: #fff; */
 }
 
 .selectWrapper::before {
