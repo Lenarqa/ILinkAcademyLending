@@ -295,6 +295,9 @@ body {
     padding-right: 16px;
     background-color: #fff;
 }
+
+
+
 .addFileBtn {
     display: flex;
     justify-content: center;
@@ -318,6 +321,11 @@ body {
     position: absolute;
 }
 
+.btnWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
 .tellUsBtn {
     font-size: 16px;
     font-weight: 500;
@@ -329,6 +337,29 @@ body {
     height: 56px;
     border: none; 
     outline: none; 
+    margin-right: 24px;
+}
+
+.tellUsBtn:hover {
+    cursor: pointer;
+}
+
+.complead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.complead img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.complead p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #303030;
 }
 
 .loadedFile {

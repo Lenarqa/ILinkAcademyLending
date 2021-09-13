@@ -93,9 +93,11 @@ const createLoadedImg = (inputImg) => {
 
 function validateForm () {
     //валидация на ввод только анг и русских букв в форме имени
-    formRowItems[0].value = formRowItems[0].value.replace(/[^a-zа-яё\s]/gi, ''); 
-
+    formRowItems[0].value = formRowItems[0].value.replace(/[^a-zа-яё\s]/gi, '');
     if(formRowItems[0].value != "" && formRowItems[1].value != ""){
+        formRowItems[0].style.borderColor = "#8E43ED";
+        formRowItems[1].style.borderColor = "#8E43ED";
+
         for (let i = 0; i < 3; i++) {
             hiddenItems[i].style.display = 'block';
         }
@@ -105,6 +107,10 @@ function validateForm () {
         let today = new Date().toISOString().split("T")[0];
         formRowItems[4].setAttribute("max", today);
         if(formRowItems[2].value != "" && formRowItems[3].value != "" && formRowItems[4].value != "") {
+            formRowItems[2].style.borderColor = "#8E43ED";
+            formRowItems[3].style.borderColor = "#8E43ED";
+            formRowItems[4].style.borderColor = "#8E43ED";
+
             hiddenItems[3].style.display = 'flex';
             if (inputFile.value != undefined && inputFile.value != "") {
                 hiddenItems[4].style.display = 'flex';
@@ -115,13 +121,21 @@ function validateForm () {
                     document.querySelector('.loadedFile').remove();
                 }
                 loadedFileWrapper.appendChild(loadedImgItem);
+                
+                
             }else{
                 hiddenItems[4].style.display = 'none';
             }
         }else{
+            formRowItems[2].style.borderColor = "#D9BBFF";
+            formRowItems[3].style.borderColor = "#D9BBFF";
+            formRowItems[4].style.borderColor = "#D9BBFF";
+
             hiddenItems[3].style.display = "none";
         }
     }else{
+        formRowItems[0].style.borderColor = "#D9BBFF";
+        formRowItems[1].style.borderColor = "#D9BBFF";
         hideItems();
     }
 };
@@ -166,13 +180,24 @@ function clickTellUsBtn () {
         let fileReaderSrc = document.querySelector(".loadedFileImg").src;
         userExportData["user_img"] = fileReaderSrc;
     }
-
+    let btn = document.querySelector('.tellUsBtn');
+    btn.style.backgroundColor = "#8E43ED";
     // Вывод готовых данных пользователя в консоль, тут должна быть отправка данных на сервер
     console.log(userExportData);
 
+    let completedSection = document.querySelector(".complead");
+    setTimeout(() => {
+        completedSection.style.display = "flex";
+    }, 10);
+    setTimeout(() => {
+        completedSection.style.display = "none";
+        btn.style.backgroundColor = "#DED9E4";
+    }, 2000);
+
+
     // зачищаем поля
     clearAll();
-    validateForm ();
+    validateForm();
 }
 
 clearAll();
